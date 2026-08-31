@@ -390,3 +390,36 @@ body.revisao #revBotao{display:block}
   .btn:hover,.cartao:hover,.cartao-foto:hover{transform:none}
 }
 @media print{.topo,.zap,#revBotao,.rev{display:none!important}}
+
+/* Paleta rosa, pedida pela direção da casa em 28/08/2026.
+   O rosa vivo #E8088E é o do cartão de visita deles.
+   Para texto, link e botão entra o #C1006F, que é o mesmo rosa
+   um passo mais fechado, porque o vivo não tem contraste
+   suficiente para leitura corrida. */
+
+:root{
+  --bordo:#C1006F;        /* texto, links, botões */
+  --bordo-esc:#6B0040;    /* seções escuras e títulos */
+  --bordo-claro:#E8088E;  /* rosa da marca, detalhes */
+  --lilas:#B0629B;        /* etiquetas e apoio */
+  --lilas-claro:#F4B8DA;  /* pontilhados e marcadores */
+  --lilas-fundo:#FEF1F8;  /* faixa clara */
+  --creme:#FDF6F2;
+  --tinta:#2E2229;
+  --tinta-suave:#6B5A64;
+  --linha:#F7DDEC;
+  --sombra:0 1px 2px rgba(46,34,41,.05), 0 8px 28px rgba(193,0,111,.07);
+  --sombra-alta:0 2px 6px rgba(46,34,41,.06), 0 18px 48px rgba(193,0,111,.14);
+}
+
+.btn-primario{background:var(--bordo-claro);box-shadow:0 6px 18px rgba(232,8,142,.26)}
+.btn-primario:hover{background:var(--bordo)}
+.hero::after{
+  background:linear-gradient(105deg,rgba(74,0,44,.94) 0%,rgba(88,0,52,.84) 38%,rgba(107,0,64,.44) 72%,rgba(232,8,142,.22) 100%)
+}
+.faixa{background:var(--bordo-esc)}
+.cta-final{background:var(--bordo)}
+.rodape{background:#4A002C}
+.marca-sub{color:var(--bordo-claro)}
+.etiqueta{color:var(--bordo-claro)}
+.nota-google strong{color:var(--bordo)}
