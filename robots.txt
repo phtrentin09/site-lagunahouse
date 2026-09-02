@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://lagunahouse.vercel.app/sitemap.xml
+Sitemap: https://casaderepousolaguna.com.br/sitemap.xml
