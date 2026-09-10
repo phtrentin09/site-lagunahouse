@@ -166,6 +166,15 @@ li{margin-bottom:.45em}
 @media(max-width:900px){.g3,.g4{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:620px){.g2,.g3,.g4{grid-template-columns:1fr}}
 
+/* grade que centraliza a ultima linha, para conjuntos de numero impar */
+.grade.fluida{display:flex;flex-wrap:wrap;justify-content:center}
+.grade.fluida>*{flex:1 1 210px;max-width:272px;height:auto;align-self:stretch}
+@media(max-width:620px){.grade.fluida>*{flex-basis:100%;max-width:none}}
+/* cartao solitario na ultima linha de uma grade de duas colunas */
+@media(min-width:621px){
+  .grade.g2>:last-child:nth-child(odd){grid-column:1/-1;width:calc(50% - 13px);margin-inline:auto}
+}
+
 .cartao{
   background:#fff;border:1px solid var(--linha);border-radius:var(--raio);
   padding:30px 28px;box-shadow:var(--sombra);transition:.22s ease;height:100%
